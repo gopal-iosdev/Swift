@@ -8,18 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		4BD707E5296E059700C2F962 /* iOS_ConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD707E4296E059700C2F962 /* iOS_ConcurrencyApp.swift */; };
-		4BD707E7296E059700C2F962 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD707E6296E059700C2F962 /* ContentView.swift */; };
+		4BD707E7296E059700C2F962 /* UsersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD707E6296E059700C2F962 /* UsersListView.swift */; };
 		4BD707E9296E059800C2F962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD707E8296E059800C2F962 /* Assets.xcassets */; };
 		4BD707EC296E059800C2F962 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD707EB296E059800C2F962 /* Preview Assets.xcassets */; };
 		4BD707F6296E08F800C2F962 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD707F5296E08F800C2F962 /* User.swift */; };
 		4BD707F8296E097100C2F962 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD707F7296E097100C2F962 /* Post.swift */; };
 		4BD707FB296E0A8F00C2F962 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD707FA296E0A8F00C2F962 /* APIService.swift */; };
+		4BD707FF296E1A2B00C2F962 /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD707FE296E1A2B00C2F962 /* UsersListViewModel.swift */; };
+		4BD70801296E1CCC00C2F962 /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = 4BD70800296E1CCC00C2F962 /* Users.json */; };
+		4BD70803296E1CEE00C2F962 /* Posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 4BD70802296E1CEE00C2F962 /* Posts.json */; };
+		4BD70806296E1DD500C2F962 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD70805296E1DD500C2F962 /* Bundle+Extension.swift */; };
+		4BD70808296E1F3C00C2F962 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD70807296E1F3C00C2F962 /* MockData.swift */; };
+		4BD7080A296E21B700C2F962 /* PostsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD70809296E21B700C2F962 /* PostsListViewModel.swift */; };
+		4BD7080E296E229100C2F962 /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7080D296E229100C2F962 /* PostsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4BD707E1296E059700C2F962 /* iOS Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Concurrency.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD707E4296E059700C2F962 /* iOS_ConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_ConcurrencyApp.swift; sourceTree = "<group>"; };
-		4BD707E6296E059700C2F962 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4BD707E6296E059700C2F962 /* UsersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListView.swift; sourceTree = "<group>"; };
 		4BD707E8296E059800C2F962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BD707EB296E059800C2F962 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4BD707F2296E05AF00C2F962 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -27,6 +34,13 @@
 		4BD707F5296E08F800C2F962 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4BD707F7296E097100C2F962 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4BD707FA296E0A8F00C2F962 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		4BD707FE296E1A2B00C2F962 /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
+		4BD70800296E1CCC00C2F962 /* Users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
+		4BD70802296E1CEE00C2F962 /* Posts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Posts.json; sourceTree = "<group>"; };
+		4BD70805296E1DD500C2F962 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		4BD70807296E1F3C00C2F962 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		4BD70809296E21B700C2F962 /* PostsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewModel.swift; sourceTree = "<group>"; };
+		4BD7080D296E229100C2F962 /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +74,13 @@
 		4BD707E3296E059700C2F962 /* iOS Concurrency */ = {
 			isa = PBXGroup;
 			children = (
-				4BD707F9296E0A7D00C2F962 /* Service */,
 				4BD707F4296E08E200C2F962 /* Models */,
+				4BD707FD296E1A1300C2F962 /* View Models */,
+				4BD707FC296E19F100C2F962 /* Views */,
+				4BD707F9296E0A7D00C2F962 /* Service */,
+				4BD70804296E1DC100C2F962 /* Extensions */,
 				4BD707F3296E072100C2F962 /* iOS-Concurrency-Info.plist */,
 				4BD707E4296E059700C2F962 /* iOS_ConcurrencyApp.swift */,
-				4BD707E6296E059700C2F962 /* ContentView.swift */,
 				4BD707E8296E059800C2F962 /* Assets.xcassets */,
 				4BD707EA296E059800C2F962 /* Preview Content */,
 			);
@@ -75,6 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				4BD707EB296E059800C2F962 /* Preview Assets.xcassets */,
+				4BD70800296E1CCC00C2F962 /* Users.json */,
+				4BD70802296E1CEE00C2F962 /* Posts.json */,
+				4BD70807296E1F3C00C2F962 /* MockData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -94,6 +113,32 @@
 				4BD707FA296E0A8F00C2F962 /* APIService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		4BD707FC296E19F100C2F962 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4BD707E6296E059700C2F962 /* UsersListView.swift */,
+				4BD7080D296E229100C2F962 /* PostsListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4BD707FD296E1A1300C2F962 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				4BD707FE296E1A2B00C2F962 /* UsersListViewModel.swift */,
+				4BD70809296E21B700C2F962 /* PostsListViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		4BD70804296E1DC100C2F962 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4BD70805296E1DD500C2F962 /* Bundle+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +199,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BD70801296E1CCC00C2F962 /* Users.json in Resources */,
 				4BD707EC296E059800C2F962 /* Preview Assets.xcassets in Resources */,
 				4BD707E9296E059800C2F962 /* Assets.xcassets in Resources */,
+				4BD70803296E1CEE00C2F962 /* Posts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,10 +213,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BD707E7296E059700C2F962 /* ContentView.swift in Sources */,
+				4BD707E7296E059700C2F962 /* UsersListView.swift in Sources */,
+				4BD70806296E1DD500C2F962 /* Bundle+Extension.swift in Sources */,
+				4BD707FF296E1A2B00C2F962 /* UsersListViewModel.swift in Sources */,
+				4BD7080A296E21B700C2F962 /* PostsListViewModel.swift in Sources */,
 				4BD707FB296E0A8F00C2F962 /* APIService.swift in Sources */,
 				4BD707E5296E059700C2F962 /* iOS_ConcurrencyApp.swift in Sources */,
+				4BD70808296E1F3C00C2F962 /* MockData.swift in Sources */,
 				4BD707F6296E08F800C2F962 /* User.swift in Sources */,
+				4BD7080E296E229100C2F962 /* PostsListView.swift in Sources */,
 				4BD707F8296E097100C2F962 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
