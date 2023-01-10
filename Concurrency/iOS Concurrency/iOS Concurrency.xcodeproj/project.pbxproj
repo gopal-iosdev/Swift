@@ -11,6 +11,9 @@
 		4BD707E7296E059700C2F962 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD707E6296E059700C2F962 /* ContentView.swift */; };
 		4BD707E9296E059800C2F962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD707E8296E059800C2F962 /* Assets.xcassets */; };
 		4BD707EC296E059800C2F962 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD707EB296E059800C2F962 /* Preview Assets.xcassets */; };
+		4BD707F6296E08F800C2F962 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD707F5296E08F800C2F962 /* User.swift */; };
+		4BD707F8296E097100C2F962 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD707F7296E097100C2F962 /* Post.swift */; };
+		4BD707FB296E0A8F00C2F962 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD707FA296E0A8F00C2F962 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,10 @@
 		4BD707E8296E059800C2F962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BD707EB296E059800C2F962 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4BD707F2296E05AF00C2F962 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4BD707F3296E072100C2F962 /* iOS-Concurrency-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "iOS-Concurrency-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4BD707F5296E08F800C2F962 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4BD707F7296E097100C2F962 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		4BD707FA296E0A8F00C2F962 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +60,9 @@
 		4BD707E3296E059700C2F962 /* iOS Concurrency */ = {
 			isa = PBXGroup;
 			children = (
+				4BD707F9296E0A7D00C2F962 /* Service */,
+				4BD707F4296E08E200C2F962 /* Models */,
+				4BD707F3296E072100C2F962 /* iOS-Concurrency-Info.plist */,
 				4BD707E4296E059700C2F962 /* iOS_ConcurrencyApp.swift */,
 				4BD707E6296E059700C2F962 /* ContentView.swift */,
 				4BD707E8296E059800C2F962 /* Assets.xcassets */,
@@ -67,6 +77,23 @@
 				4BD707EB296E059800C2F962 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4BD707F4296E08E200C2F962 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4BD707F5296E08F800C2F962 /* User.swift */,
+				4BD707F7296E097100C2F962 /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4BD707F9296E0A7D00C2F962 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4BD707FA296E0A8F00C2F962 /* APIService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +167,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BD707E7296E059700C2F962 /* ContentView.swift in Sources */,
+				4BD707FB296E0A8F00C2F962 /* APIService.swift in Sources */,
 				4BD707E5296E059700C2F962 /* iOS_ConcurrencyApp.swift in Sources */,
+				4BD707F6296E08F800C2F962 /* User.swift in Sources */,
+				4BD707F8296E097100C2F962 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,11 +302,12 @@
 				DEVELOPMENT_TEAM = 72U296NY4T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS-Concurrency-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,11 +332,12 @@
 				DEVELOPMENT_TEAM = 72U296NY4T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS-Concurrency-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
