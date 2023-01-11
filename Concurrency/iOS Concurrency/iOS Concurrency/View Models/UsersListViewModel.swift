@@ -8,14 +8,16 @@
 import Foundation
 
 class UsersListViewModel: ObservableObject {
-    @Published var users: [User] = []
+    @Published var usersAndPosts: [UserAndPosts] = []
     @Published var isLoading = false
     @Published var showAlert = false
     @Published var errorMessage: String?
     
     @MainActor
     func fetchUsers() async {
-        let apiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users")
+        let usersService = APIService(urlString: "https://jsonplaceholder.typicode.com/users")
+        let postsService = APIService(urlString: "https://jsonplaceholder.typicode.com/posts")
+        
         isLoading.toggle()
         
         defer {
@@ -23,7 +25,17 @@ class UsersListViewModel: ObservableObject {
         }
         
         do {
-            users = try await apiService.getJSON()
+            async let users: [User] = try await usersService.getJSON()
+            async let posts: [Post] = try await postsService.getJSON()
+            
+            let (fetchedUsers, fetchedPosts) = await (try users, try posts)
+            
+            fetchedUsers.forEach { user in
+                let userPosts = fetchedPosts.filter { $0.userId == user.id }
+                let newUserAndPosts = UserAndPosts(user: user, posts: userPosts)
+                
+                usersAndPosts.append(newUserAndPosts)
+            }
         } catch {
             showAlert = true
             errorMessage = error.localizedDescription + "\nPlease contact the developer and provide this error and the steps to reproduce."
@@ -34,9 +46,9 @@ class UsersListViewModel: ObservableObject {
 extension UsersListViewModel {
     convenience init(forPreview: Bool = false) {
         self.init()
-        
+
         if forPreview {
-            self.users = User.mockUsers
+            self.usersAndPosts = UserAndPosts.mockUsersAndPosts
         }
     }
 }

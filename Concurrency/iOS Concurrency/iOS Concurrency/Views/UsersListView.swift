@@ -14,14 +14,18 @@ struct UsersListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(vm.users) { user in
+                ForEach(vm.usersAndPosts) { userAndPosts in
                     NavigationLink {
-                        PostsListView(userId: user.id)
+                        PostsListView(posts: userAndPosts.posts)
                     } label: {
                         VStack(alignment: .leading) {
-                            Text(user.name)
-                                .font(.title)
-                            Text(user.email)
+                            HStack {
+                                Text(userAndPosts.user.name)
+                                    .font(.title)
+                                Spacer()
+                                Text("(\(userAndPosts.numberOfPosts))")
+                            }
+                            Text(userAndPosts.user.email)
                         }
                     }
                 }
