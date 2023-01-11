@@ -9,18 +9,28 @@ import Foundation
 
 class UsersListViewModel: ObservableObject {
     @Published var users: [User] = []
+    @Published var isLoading = false
     
     func fetchUsers() {
         let apiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users")
+        isLoading.toggle()
         
-        apiService.getJSON { (result: Result<[User], APIError>) in
-            switch result {
-            case .success(let fetchedUsers):
-                DispatchQueue.main.async {
-                    self.users = fetchedUsers
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            apiService.getJSON { (result: Result<[User], APIError>) in
+                defer {
+                    DispatchQueue.main.async {
+                        self.isLoading.toggle()
+                    }
                 }
-            case .failure(let failure):
-                dump(failure)
+                
+                switch result {
+                case .success(let fetchedUsers):
+                    DispatchQueue.main.async {
+                        self.users = fetchedUsers
+                    }
+                case .failure(let failure):
+                    dump(failure)
+                }
             }
         }
     }

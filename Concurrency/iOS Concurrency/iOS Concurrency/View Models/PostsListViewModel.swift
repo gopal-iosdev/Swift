@@ -9,14 +9,22 @@ import Foundation
 
 class PostsListViewModel: ObservableObject {
     @Published var posts: [Post] = []
+    @Published var isLoading = false
     var userId: Int?
     
     func fetchPosts() {
         guard let userId else { return }
         
         let apiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users/\(userId)/posts")
+        isLoading.toggle()
         
         apiService.getJSON { (result: Result<[Post], APIError>) in
+            defer {
+                DispatchQueue.main.async {
+                    self.isLoading.toggle()
+                }
+            }
+            
             switch result {
             case .success(let fetchedPosts):
                 DispatchQueue.main.async {
