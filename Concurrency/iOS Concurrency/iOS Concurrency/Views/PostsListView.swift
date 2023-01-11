@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PostsListView: View {
-    @State var vm: PostsListViewModel = PostsListViewModel(forPreview: true)
+    @State var vm: PostsListViewModel = PostsListViewModel(forPreview: false)
     var userId: Int?
     
     var body: some View {
@@ -26,6 +26,13 @@ struct PostsListView: View {
         .overlay(content: {
             if vm.isLoading {
                 ProgressView()
+            }
+        })
+        .alert("Application Error", isPresented: $vm.showAlert, actions: {
+            Button("Ok") {}
+        }, message: {
+            if let errorMessage = vm.errorMessage {
+                Text(errorMessage)
             }
         })
         .navigationTitle("Posts")

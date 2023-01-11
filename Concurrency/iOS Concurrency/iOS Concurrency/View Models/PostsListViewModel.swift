@@ -10,6 +10,8 @@ import Foundation
 class PostsListViewModel: ObservableObject {
     @Published var posts: [Post] = []
     @Published var isLoading = false
+    @Published var showAlert = false
+    @Published var errorMessage: String?
     var userId: Int?
     
     func fetchPosts() {
@@ -30,8 +32,11 @@ class PostsListViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.posts = fetchedPosts
                 }
-            case .failure(let failure):
-                dump(failure)
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self.showAlert = true
+                    self.errorMessage = error.localizedDescription + "\nPlease contact the developer and provide this error and the steps to reproduce."
+                }
             }
         }
     }
