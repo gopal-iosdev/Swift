@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PostsListView: View {
-    @State var vm: PostsListViewModel = PostsListViewModel(forPreview: false)
+    @StateObject var vm: PostsListViewModel = PostsListViewModel(forPreview: false)
     var userId: Int?
     
     var body: some View {
