@@ -3,7 +3,11 @@
     - https://www.youtube.com/watch?v=X9H2M7xMi9E&ab_channel=iCode
 
  - Concurrency:
- -
+ 
+    - Dispatch Group:
+        - Multiple tasks can be grouped together.
+        - We can get notified when some or all of the tasks are finished.
+ 
  
  */
 
@@ -232,3 +236,71 @@ concurrentQueue.async {
  print("Last line in playground")
  
  */
+
+// MARK: - Operation
+
+/*
+class CustomOperation: Operation {
+    override func start() {
+        Thread.init(block: main).start()
+    }
+    
+    override func main() {
+        for i in 0...10 {
+            print(i)
+        }
+    }
+}
+
+let operation = CustomOperation()
+operation.start()
+print("Custom operation executed on: \(Thread.isMainThread ? "Main" : "Other")")
+*/
+ 
+// MARK: - OperationQueue
+
+/*
+
+func testOperationQueue() {
+    let operationQueue = OperationQueue()
+    
+    let operation1 = BlockOperation()
+    operation1.addExecutionBlock(operationOne)
+    
+    operation1.completionBlock = {
+        print("Operation 1 being completed")
+    }
+    
+    let operation2 = BlockOperation()
+    operation2.addExecutionBlock(operationTwo)
+    
+    operation2.completionBlock = {
+        print("Operation 2 being completed")
+    }
+    
+    operation2.addDependency(operation1)
+    
+    operationQueue.addOperation(operation1)
+    operationQueue.addOperation(operation2)
+}
+
+func operationOne() {
+    DispatchQueue.global().async {
+        for i in 0...10 {
+            print(i)
+        }
+    }
+}
+
+func operationTwo() {
+    DispatchQueue.global().async {
+        for i in 11...20 {
+            print(i)
+        }
+    }
+}
+
+testOperationQueue()
+print("Custom operation being executed")
+
+*/

@@ -29,6 +29,26 @@ class UsersListViewModel: ObservableObject {
             errorMessage = error.localizedDescription + "\nPlease contact the developer and provide this error and the steps to reproduce."
         }
     }
+    
+    @MainActor
+    func fetchUsersAndPosts() async {
+        let usersApiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users")
+        let postsApiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users/1/posts")
+        
+        isLoading.toggle()
+        
+        defer {
+            isLoading.toggle()
+        }
+        
+        do {
+            users = try await usersApiService.getJSON()
+            let posts: [Post] = try await postsApiService.getJSON()
+        } catch {
+            showAlert = true
+            errorMessage = error.localizedDescription + "\nPlease contact the developer and provide this error and the steps to reproduce."
+        }
+    }
 }
 
 extension UsersListViewModel {

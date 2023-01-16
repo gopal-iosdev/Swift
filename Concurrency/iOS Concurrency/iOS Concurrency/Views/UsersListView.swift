@@ -40,7 +40,8 @@ struct UsersListView: View {
             .listStyle(.plain)
             .onAppear {
                 Task {
-                    await vm.fetchUsers()
+//                    await vm.fetchUsers()
+                    await vm.fetchUsersAndPosts()
                 }
             }
         }
