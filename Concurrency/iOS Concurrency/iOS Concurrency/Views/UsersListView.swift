@@ -26,22 +26,23 @@ struct UsersListView: View {
                     }
                 }
             }
-            .overlay(content: {
-                if vm.isLoading {
-                    ProgressView()
+            .overlay(
+                Group {
+                    if vm.isLoading {
+                        ProgressView()
+                    }
                 }
-            })
-            .alert("Application Error", isPresented: $vm.showAlert, actions: {
-                Button("Ok") {}
-            }, message: {
-                if let errorMessage = vm.errorMessage {
-                    Text(errorMessage)
-                }
+            )
+            .alert(isPresented: $vm.showAlert, content: {
+                Alert(title: Text("Application Error"), message: Text(vm.errorMessage ?? ""))
             })
             .navigationTitle("Users")
             .listStyle(.plain)
             .onAppear {
-                vm.fetchUsers()
+                Task {
+//                    await vm.fetchUsers()
+                    await vm.fetchUsersAndPosts()
+                }
             }
         }
     }

@@ -13,28 +13,40 @@ class UsersListViewModel: ObservableObject {
     @Published var showAlert = false
     @Published var errorMessage: String?
     
-    func fetchUsers() {
+    @MainActor
+    func fetchUsers() async {
         let apiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users")
         isLoading.toggle()
         
-        apiService.getJSON { (result: Result<[User], APIError>) in
-            defer {
-                DispatchQueue.main.async {
-                    self.isLoading.toggle()
-                }
-            }
-            
-            switch result {
-            case .success(let fetchedUsers):
-                DispatchQueue.main.async {
-                    self.users = fetchedUsers
-                }
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self.showAlert = true
-                    self.errorMessage = error.localizedDescription + "\nPlease contact the developer and provide this error and the steps to reproduce."
-                }
-            }
+        defer {
+            isLoading.toggle()
+        }
+        
+        do {
+            users = try await apiService.getJSON()
+        } catch {
+            showAlert = true
+            errorMessage = error.localizedDescription + "\nPlease contact the developer and provide this error and the steps to reproduce."
+        }
+    }
+    
+    @MainActor
+    func fetchUsersAndPosts() async {
+        let usersApiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users")
+        let postsApiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users/1/posts")
+        
+        isLoading.toggle()
+        
+        defer {
+            isLoading.toggle()
+        }
+        
+        do {
+            users = try await usersApiService.getJSON()
+            let posts: [Post] = try await postsApiService.getJSON()
+        } catch {
+            showAlert = true
+            errorMessage = error.localizedDescription + "\nPlease contact the developer and provide this error and the steps to reproduce."
         }
     }
 }
