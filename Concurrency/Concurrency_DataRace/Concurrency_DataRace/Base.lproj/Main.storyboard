@@ -21,14 +21,30 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhL-Q9-MOE">
+                                <rect key="frame" x="156.33333333333334" y="348" width="80.333333333333343" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="FKx-B9-iMe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="START!"/>
+                                <connections>
+                                    <action selector="startButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jeY-UC-EIH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="RTZ-hc-7FE" firstAttribute="top" secondItem="OhL-Q9-MOE" secondAttribute="bottom" constant="24" id="7O9-fJ-qtU"/>
+                            <constraint firstItem="OhL-Q9-MOE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CIE-go-J6u"/>
                             <constraint firstItem="RTZ-hc-7FE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YyD-of-Cut"/>
                             <constraint firstItem="RTZ-hc-7FE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zKn-FV-Wrj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="RTZ-hc-7FE" id="ix3-sl-m9j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

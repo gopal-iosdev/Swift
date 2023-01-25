@@ -16,6 +16,7 @@
 		4B5DB4882981D05900104E9A /* Concurrency_DataRaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DB4872981D05900104E9A /* Concurrency_DataRaceTests.swift */; };
 		4B5DB4922981D05900104E9A /* Concurrency_DataRaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DB4912981D05900104E9A /* Concurrency_DataRaceUITests.swift */; };
 		4B5DB4942981D05900104E9A /* Concurrency_DataRaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DB4932981D05900104E9A /* Concurrency_DataRaceUITestsLaunchTests.swift */; };
+		4B5DB4A12981D27000104E9A /* DataRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DB4A02981D27000104E9A /* DataRace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4B5DB48D2981D05900104E9A /* Concurrency_DataRaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Concurrency_DataRaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5DB4912981D05900104E9A /* Concurrency_DataRaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concurrency_DataRaceUITests.swift; sourceTree = "<group>"; };
 		4B5DB4932981D05900104E9A /* Concurrency_DataRaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concurrency_DataRaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4B5DB4A02981D27000104E9A /* DataRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				4B5DB4702981D05800104E9A /* AppDelegate.swift */,
 				4B5DB4722981D05800104E9A /* SceneDelegate.swift */,
 				4B5DB4742981D05800104E9A /* ViewController.swift */,
+				4B5DB4A02981D27000104E9A /* DataRace.swift */,
 				4B5DB4762981D05800104E9A /* Main.storyboard */,
 				4B5DB4792981D05900104E9A /* Assets.xcassets */,
 				4B5DB47B2981D05900104E9A /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				4B5DB4752981D05800104E9A /* ViewController.swift in Sources */,
 				4B5DB4712981D05800104E9A /* AppDelegate.swift in Sources */,
+				4B5DB4A12981D27000104E9A /* DataRace.swift in Sources */,
 				4B5DB4732981D05800104E9A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
