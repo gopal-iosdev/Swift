@@ -3,5 +3,6 @@
     <pages>
         <page name='Actors'/>
         <page name='GCD'/>
+        <page name='Sync vs Async'/>
     </pages>
 </playground>
