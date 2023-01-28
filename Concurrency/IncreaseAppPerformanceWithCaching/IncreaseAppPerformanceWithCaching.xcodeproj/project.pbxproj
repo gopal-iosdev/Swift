@@ -17,6 +17,7 @@
 		4B5DB550298598BF00104E9A /* IncreaseAppPerformanceWithCachingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DB54F298598BF00104E9A /* IncreaseAppPerformanceWithCachingUITestsLaunchTests.swift */; };
 		4B5DB55D298598E900104E9A /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DB55C298598E900104E9A /* ImagesViewController.swift */; };
 		4B5DB55F2985990F00104E9A /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DB55E2985990F00104E9A /* ImageTableViewCell.swift */; };
+		4B5DB5622985A39500104E9A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DB5612985A39500104E9A /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4B5DB54F298598BF00104E9A /* IncreaseAppPerformanceWithCachingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseAppPerformanceWithCachingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4B5DB55C298598E900104E9A /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		4B5DB55E2985990F00104E9A /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		4B5DB5612985A39500104E9A /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		4B5DB520298598BE00104E9A = {
 			isa = PBXGroup;
 			children = (
+				4B5DB5602985A32200104E9A /* Extensions */,
 				4B5DB52B298598BE00104E9A /* IncreaseAppPerformanceWithCaching */,
 				4B5DB542298598BF00104E9A /* IncreaseAppPerformanceWithCachingTests */,
 				4B5DB54C298598BF00104E9A /* IncreaseAppPerformanceWithCachingUITests */,
@@ -104,11 +107,11 @@
 				4B5DB52C298598BE00104E9A /* AppDelegate.swift */,
 				4B5DB52E298598BE00104E9A /* SceneDelegate.swift */,
 				4B5DB55C298598E900104E9A /* ImagesViewController.swift */,
+				4B5DB55E2985990F00104E9A /* ImageTableViewCell.swift */,
 				4B5DB532298598BE00104E9A /* Main.storyboard */,
 				4B5DB535298598BF00104E9A /* Assets.xcassets */,
 				4B5DB537298598BF00104E9A /* LaunchScreen.storyboard */,
 				4B5DB53A298598BF00104E9A /* Info.plist */,
-				4B5DB55E2985990F00104E9A /* ImageTableViewCell.swift */,
 			);
 			path = IncreaseAppPerformanceWithCaching;
 			sourceTree = "<group>";
@@ -128,6 +131,14 @@
 				4B5DB54F298598BF00104E9A /* IncreaseAppPerformanceWithCachingUITestsLaunchTests.swift */,
 			);
 			path = IncreaseAppPerformanceWithCachingUITests;
+			sourceTree = "<group>";
+		};
+		4B5DB5602985A32200104E9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4B5DB5612985A39500104E9A /* UIImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B5DB52D298598BE00104E9A /* AppDelegate.swift in Sources */,
+				4B5DB5622985A39500104E9A /* UIImage.swift in Sources */,
 				4B5DB55F2985990F00104E9A /* ImageTableViewCell.swift in Sources */,
 				4B5DB55D298598E900104E9A /* ImagesViewController.swift in Sources */,
 				4B5DB52F298598BE00104E9A /* SceneDelegate.swift in Sources */,

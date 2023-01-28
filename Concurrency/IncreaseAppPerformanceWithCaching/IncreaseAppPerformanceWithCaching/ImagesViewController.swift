@@ -45,6 +45,24 @@ final class ImagesViewController: UITableViewController {
         Image(title: "Mountain Sunrise",                url: URL(string: "https://cdn.cocoacasts.com/7ba5c3e7df669703cd7f0f0d4cefa5e5947126a8/8.jpg")),
         Image(title: "Colours of Middle Earth",         url: URL(string: "https://cdn.cocoacasts.com/7ba5c3e7df669703cd7f0f0d4cefa5e5947126a8/9.jpg"))
     ]
+    
+    private lazy var session: URLSession = {
+        let configuration = URLSessionConfiguration.default
+        
+        configuration.requestCachePolicy = .returnCacheDataElseLoad
+        
+        return URLSession(configuration: configuration)
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print("BEFORE, Default cache size: \(URLCache.shared.memoryCapacity)")
+        
+        URLCache.shared.memoryCapacity = 512 * 1024 * 1024 // 512 GB
+        
+        print("AFTER, Default cache size: \(URLCache.shared.memoryCapacity)")
+    }
 
     // MARK: - Table View Data Source
 
@@ -65,7 +83,7 @@ final class ImagesViewController: UITableViewController {
         let image = dataSource[indexPath.row]
 
         // Configure Cell
-        cell.configure(with: image.title, url: image.url)
+        cell.configure(with: image.title, url: image.url, session: session)
 
         return cell
     }

@@ -50,6 +50,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="activityIndicatorView" destination="1Zo-w4-MXe" id="MNK-Ex-Sb9"/>
                                     <outlet property="thumbnailImageView" destination="lxd-OO-FSc" id="GoW-i7-Y6y"/>
                                     <outlet property="titleLabel" destination="nYd-Sr-Bad" id="FzA-gO-AnZ"/>
                                 </connections>
