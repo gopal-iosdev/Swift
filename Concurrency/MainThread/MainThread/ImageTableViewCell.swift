@@ -30,9 +30,27 @@ final class ImageTableViewCell: UITableViewCell {
         titleLabel.text = title
         
         // Load Data
-        if let url = url, let data = try? Data(contentsOf: url) {
+        
+        // MARK: - Problem: Blocking Main Queue
+        
+//        if let url = url, let data = try? Data(contentsOf: url) {
+//            // Configure Thumbnail Image View
+//            thumbnailImageView.image = UIImage(data: data)
+//        }
+        
+        // MARK: - Solution: Unblocking Main Queue
+        
+        guard let url else { return }
+        
+        DispatchQueue.global(qos: .background).async {
+            guard let data = try? Data(contentsOf: url),
+                  let image = UIImage(data: data)
+            else { return }
+            
             // Configure Thumbnail Image View
-            thumbnailImageView.image = UIImage(data: data)
+            DispatchQueue.main.async {
+                self.thumbnailImageView.image = image
+            }
         }
     }
     

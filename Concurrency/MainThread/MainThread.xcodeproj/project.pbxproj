@@ -51,6 +51,7 @@
 		4B5DB50E2985929500104E9A /* MainThreadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThreadUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4B5DB51B298592F200104E9A /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		4B5DB51D2985931B00104E9A /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		4B5DB51F2985978600104E9A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		4B5DB4DF2985929400104E9A = {
 			isa = PBXGroup;
 			children = (
+				4B5DB51F2985978600104E9A /* README.md */,
 				4B5DB4EA2985929400104E9A /* MainThread */,
 				4B5DB5012985929500104E9A /* MainThreadTests */,
 				4B5DB50B2985929500104E9A /* MainThreadUITests */,
