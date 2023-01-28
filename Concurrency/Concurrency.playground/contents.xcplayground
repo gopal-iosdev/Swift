@@ -4,5 +4,6 @@
         <page name='Actors'/>
         <page name='GCD'/>
         <page name='Sync vs Async'/>
+        <page name='Thread'/>
     </pages>
 </playground>
