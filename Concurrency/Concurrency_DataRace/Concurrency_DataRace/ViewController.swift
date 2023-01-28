@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBAction func startButtonAction(_ sender: UIButton) {
 //        updateCount()
 //        updateCountUsingAsync()
-        
+        updateCountUsingActor()
     }
     
     override func viewDidLoad() {

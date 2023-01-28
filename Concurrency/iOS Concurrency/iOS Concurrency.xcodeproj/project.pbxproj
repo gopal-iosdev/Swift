@@ -353,6 +353,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iOS Concurrency/Preview Content\"";
 				DEVELOPMENT_TEAM = UEQ95NQCUE;
 				ENABLE_PREVIEWS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS-Concurrency-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
