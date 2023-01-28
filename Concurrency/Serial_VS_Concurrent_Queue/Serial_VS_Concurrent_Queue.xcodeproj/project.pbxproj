@@ -49,6 +49,7 @@
 		4B5DB4CB2985900100104E9A /* Serial_VS_Concurrent_QueueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Serial_VS_Concurrent_QueueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5DB4CF2985900100104E9A /* Serial_VS_Concurrent_QueueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serial_VS_Concurrent_QueueUITests.swift; sourceTree = "<group>"; };
 		4B5DB4D12985900100104E9A /* Serial_VS_Concurrent_QueueUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serial_VS_Concurrent_QueueUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4B5DB4DE298590B000104E9A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		4B5DB4A22985900000104E9A = {
 			isa = PBXGroup;
 			children = (
+				4B5DB4DE298590B000104E9A /* README.md */,
 				4B5DB4AD2985900000104E9A /* Serial_VS_Concurrent_Queue */,
 				4B5DB4C42985900100104E9A /* Serial_VS_Concurrent_QueueTests */,
 				4B5DB4CE2985900100104E9A /* Serial_VS_Concurrent_QueueUITests */,
