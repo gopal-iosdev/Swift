@@ -10,6 +10,8 @@
     - Thread safety is all about avoiding messed up variable states
  
  - GCD:
+    - Low-level C API
+    - NSOperation -> Objective-C API
     - Synchronous tasks you'll block the execution queue.
         - Your function is most likely synchronous if it has a return value, so func load() -> String is going to probably block the thing that runs on until the resources is completely loaded and returned back.
     - With async tasks your call will instantly return and the queue can continue the execution of the remaining tasks.
