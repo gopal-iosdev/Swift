@@ -12,8 +12,9 @@
  
 */
 
-
 import Foundation
+
+/*
 
 func doSomething() {
     for number in 0..<10_000_000 {
@@ -24,6 +25,8 @@ func doSomething() {
 let clock = ContinuousClock( )
 let time = clock.measure(doSomething)
 print(time)
+ 
+ */
 
 
 //: [Next](@next)
