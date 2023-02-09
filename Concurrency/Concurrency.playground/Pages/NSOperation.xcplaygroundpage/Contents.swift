@@ -17,7 +17,7 @@
     - When to Use NSOperation:
         - Encapsulate the login sequence of an application.
         - If you need to perform several tasks in a specific order, then operations are a good solution.
-        - 
+        -
  
 */
 
