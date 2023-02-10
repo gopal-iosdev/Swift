@@ -67,20 +67,93 @@ extension Date {
  
  */
 
-// MARK: - Types of Queues
+// MARK: - 1.) What is GCD(Grand Central Dispatch):
 
 /*
+ - There are several options to manage threads. Grand Central Dispatch is one of them.
+    - As a Cocoa developer, you rarely directly interact with threads.
+    - Several years ago, Apple introduced Grand Central Dispatch, GCD for short, a technology that makes working with threads easier and more efficient.
+    - Low-level C API
+    - Which thread is used to execute a task is handled by Grand Central Dispatch, not the developer.
+    - Grand Central Dispatch operates at the system level.
+    - Grand Central Dispatch manages a collection of dispatch queues.
+    - Dispatch Queues are executed in 2 ways:
+        - Synchronous and Asynchronous
+ */
 
-DispatchQueue.main
-DispatchQueue.global(qos: .userInitiated)
-DispatchQueue.global(qos: .userInteractive)
-DispatchQueue.global(qos: .background)
-DispatchQueue.global(qos: .default)
-DispatchQueue.global(qos: .utility)
-DispatchQueue.global(qos: .unspecified)
-DispatchQueue(label: "com.theswiftdev.queues.serial")
-DispatchQueue(label: "com.theswiftdev.queues.concurrent", attributes: .concurrent)
+// MARK: - 2.) Synchronous and Asynchronous execution
 
+/*
+ - Each work item can be executed either synchronously or asynchronously.
+ - Synchronous execution:
+    - Synchronous tasks you'll block the execution queue.
+        - Your function is most likely synchronous if it has a return value, so func load() -> String is going to probably block the thing that runs on until the resources is completely loaded and returned back.
+ - Asynchronous execution:
+    - With async tasks your call will instantly return and the queue can continue the execution of the remaining tasks.
+        - Completion blocks are a good sing of async methods, for example if you look at this method func load(completion: (String) -> Void) you can see that it has no return type, but the result of the function is passed back to the caller later on through a block.
+ */
+
+func aBlockingFunction() -> String {
+    sleep(.random(in: 1...3))
+    return "Hello world!"
+}
+
+func syncMethod() -> String {
+    return aBlockingFunction()
+}
+
+func asyncMethod(completion block: @escaping ((String) -> Void)) {
+//    DispatchQueue.global(qos: .background).async {
+//        block(aBlockingFunction())
+//    }
+    
+    DispatchQueue.global().async {
+        block(aBlockingFunction())
+    }
+}
+
+print(syncMethod())
+print("sync method returned")
+
+
+asyncMethod { value in
+    print(value)
+}
+print("async method returned")
+
+// MARK: - 3.) Dispatch Queues
+
+/*
+ - GCD organizes task into queues.
+ - GCD executes tasks in FIFO order.
+ - There are two types of dispatch queues:
+     - Serial and concurrent queues
+     - Run Serial v/s Concurrent Queue project on Xcode
+ - The main queue is a serial one, every task on the main queue runs on the main thread.
+ - Global queues are system provided concurrent queues shared through the operating system.
+ - Custom queues can be created by the user.
+ */
+
+// MARK: - 4.) Types of Queues
+
+/*
+- Main dispatch queue:
+ DispatchQueue.main
+
+- Private queues:
+ DispatchQueue(label: "com.theswiftdev.queues.serial")
+ DispatchQueue(label: "com.theswiftdev.queues.concurrent", attributes: .concurrent)
+
+- Global queues:
+ DispatchQueue.global(qos: .userInitiated)
+ DispatchQueue.global(qos: .userInteractive)
+ DispatchQueue.global(qos: .background)
+ DispatchQueue.global(qos: .default)
+ DispatchQueue.global(qos: .utility)
+ DispatchQueue.global(qos: .unspecified)
+
+- In general we are encouraged to use main/ private queues.
+- Stop here, remaining next time.
 */
 
 // MARK: - Switching b/w Queues
