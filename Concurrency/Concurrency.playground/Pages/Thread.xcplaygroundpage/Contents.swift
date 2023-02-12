@@ -79,11 +79,19 @@ class SomeApp {
     }
 }
 
-let customThread = SomeApp()
-customThread.createThread()
-print(customThread.thread?.isExecuting, customThread.thread?.isFinished, customThread.thread?.isCancelled)
-customThread.cancelThread()
-print(customThread.thread?.isExecuting, customThread.thread?.isFinished, customThread.thread?.isCancelled)
+//let customApp = SomeApp()
+//customApp.createThread()
+//print(customApp.thread?.isExecuting,
+//      customApp.thread?.isFinished,
+//      customApp.thread?.isCancelled)
+//
+//
+//customApp.cancelThread()
+//
+//print(customApp.thread?.isExecuting,
+//      customApp.thread?.isFinished,
+//      customApp.thread?.isCancelled)
+
 
 // MARK: - 3.) Why do we need Multi Threading?
 
@@ -111,6 +119,7 @@ print(customThread.thread?.isExecuting, customThread.thread?.isFinished, customT
  */
 
 print(Thread.isMainThread)
+
 
 DispatchQueue.global().async {
     print(Thread.isMainThread)

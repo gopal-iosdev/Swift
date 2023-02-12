@@ -6,5 +6,6 @@
         <page name='Sync vs Async'/>
         <page name='Thread'/>
         <page name='NSOperation'/>
+        <page name='Running Tasks In Paralell'/>
     </pages>
 </playground>
