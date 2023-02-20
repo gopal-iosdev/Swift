@@ -33,7 +33,6 @@
 		4B146543296B5BDE0036EF47 /* BusinessAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146542296B5BDE0036EF47 /* BusinessAvatarImageView.swift */; };
 		4B146545296B5F840036EF47 /* ImageLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146544296B5F840036EF47 /* ImageLoadManager.swift */; };
 		4B146547296B84F40036EF47 /* CoffeeShopsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146546296B84F40036EF47 /* CoffeeShopsDataSource.swift */; };
-		4B146549296BA2700036EF47 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4B146548296BA2700036EF47 /* README.md */; };
 		4B5DB566298C820D00104E9A /* UsesAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DB565298C820D00104E9A /* UsesAutoLayout.swift */; };
 		4B6BA6BC29A31EB7001B116E /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6BA6BB29A31EB7001B116E /* AppEnvironment.swift */; };
 /* End PBXBuildFile section */
@@ -67,7 +66,6 @@
 		4B146542296B5BDE0036EF47 /* BusinessAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessAvatarImageView.swift; sourceTree = "<group>"; };
 		4B146544296B5F840036EF47 /* ImageLoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadManager.swift; sourceTree = "<group>"; };
 		4B146546296B84F40036EF47 /* CoffeeShopsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopsDataSource.swift; sourceTree = "<group>"; };
-		4B146548296BA2700036EF47 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4B5DB565298C820D00104E9A /* UsesAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesAutoLayout.swift; sourceTree = "<group>"; };
 		4B6BA6B829A31D9A001B116E /* Configuration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.xcconfig; sourceTree = "<group>"; };
 		4B6BA6BB29A31EB7001B116E /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 		4B1464DF296778960036EF47 = {
 			isa = PBXGroup;
 			children = (
-				4B146548296BA2700036EF47 /* README.md */,
 				4B6BA6B829A31D9A001B116E /* Configuration.xcconfig */,
 				4B6BA6BB29A31EB7001B116E /* AppEnvironment.swift */,
 				4B1464EA296778960036EF47 /* CoffeeShops */,
@@ -276,7 +273,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B146549296BA2700036EF47 /* README.md in Resources */,
 				4B1464F8296778970036EF47 /* LaunchScreen.storyboard in Resources */,
 				4B1464F5296778970036EF47 /* Assets.xcassets in Resources */,
 			);
