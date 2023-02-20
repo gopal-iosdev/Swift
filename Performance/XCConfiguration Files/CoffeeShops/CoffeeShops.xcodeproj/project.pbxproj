@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B1464EC296778960036EF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1464EB296778960036EF47 /* AppDelegate.swift */; };
+		4B1464EE296778960036EF47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1464ED296778960036EF47 /* SceneDelegate.swift */; };
+		4B1464F5296778970036EF47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B1464F4296778970036EF47 /* Assets.xcassets */; };
+		4B1464F8296778970036EF47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B1464F6296778970036EF47 /* LaunchScreen.storyboard */; };
+		4B14650129677BAE0036EF47 /* CoffeeShopsDirectoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14650029677BAE0036EF47 /* CoffeeShopsDirectoryVC.swift */; };
+		4B14650429677C1B0036EF47 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14650329677C1B0036EF47 /* API.swift */; };
+		4B14650629677C490036EF47 /* CoffeeShopsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14650529677C490036EF47 /* CoffeeShopsAPI.swift */; };
+		4B146509296A26680036EF47 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146508296A26680036EF47 /* NetworkManager.swift */; };
+		4B14650C296A279D0036EF47 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14650B296A279D0036EF47 /* NetworkError.swift */; };
+		4B146516296A68970036EF47 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146515296A68970036EF47 /* Business.swift */; };
+		4B146518296A68E80036EF47 /* BusinessSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146517296A68E80036EF47 /* BusinessSearchResponse.swift */; };
+		4B14651A296A6EA50036EF47 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146519296A6EA50036EF47 /* Loadable.swift */; };
+		4B14651C296A6F360036EF47 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14651B296A6F360036EF47 /* EmptyStateView.swift */; };
+		4B14651F296A6F840036EF47 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14651E296A6F840036EF47 /* TitleLabel.swift */; };
+		4B146521296A70B40036EF47 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146520296A70B40036EF47 /* Assets.swift */; };
+		4B146523296A711A0036EF47 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146522296A711A0036EF47 /* UIView+Extension.swift */; };
+		4B146525296A71360036EF47 /* NSLayoutConstraint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146524296A71360036EF47 /* NSLayoutConstraint+Extension.swift */; };
+		4B14652C296A72B60036EF47 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14652B296A72B60036EF47 /* ImageCacheManager.swift */; };
+		4B146534296A81850036EF47 /* CoffeeShopsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146533296A81850036EF47 /* CoffeeShopsDataManager.swift */; };
+		4B146536296A8B820036EF47 /* CoffeeShopsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146535296A8B820036EF47 /* CoffeeShopsViewModel.swift */; };
+		4B14653D296B5AE80036EF47 /* BusinessListCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14653C296B5AE80036EF47 /* BusinessListCollectionViewFlowLayout.swift */; };
+		4B14653F296B5B5F0036EF47 /* SecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14653E296B5B5F0036EF47 /* SecondaryTitleLabel.swift */; };
+		4B146541296B5B960036EF47 /* BusinessInfoCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146540296B5B960036EF47 /* BusinessInfoCVCell.swift */; };
+		4B146543296B5BDE0036EF47 /* BusinessAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146542296B5BDE0036EF47 /* BusinessAvatarImageView.swift */; };
+		4B146545296B5F840036EF47 /* ImageLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146544296B5F840036EF47 /* ImageLoadManager.swift */; };
+		4B146547296B84F40036EF47 /* CoffeeShopsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B146546296B84F40036EF47 /* CoffeeShopsDataSource.swift */; };
+		4B146549296BA2700036EF47 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4B146548296BA2700036EF47 /* README.md */; };
+		4B5DB566298C820D00104E9A /* UsesAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DB565298C820D00104E9A /* UsesAutoLayout.swift */; };
+		4B6BA6BC29A31EB7001B116E /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6BA6BB29A31EB7001B116E /* AppEnvironment.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B1464E8296778960036EF47 /* CoffeeShops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeShops.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B1464EB296778960036EF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B1464ED296778960036EF47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4B1464F4296778970036EF47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B1464F7296778970036EF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4B1464F9296778970036EF47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B14650029677BAE0036EF47 /* CoffeeShopsDirectoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopsDirectoryVC.swift; sourceTree = "<group>"; };
+		4B14650329677C1B0036EF47 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4B14650529677C490036EF47 /* CoffeeShopsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopsAPI.swift; sourceTree = "<group>"; };
+		4B146508296A26680036EF47 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4B14650B296A279D0036EF47 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		4B146515296A68970036EF47 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		4B146517296A68E80036EF47 /* BusinessSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearchResponse.swift; sourceTree = "<group>"; };
+		4B146519296A6EA50036EF47 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		4B14651B296A6F360036EF47 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		4B14651E296A6F840036EF47 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		4B146520296A70B40036EF47 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		4B146522296A711A0036EF47 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4B146524296A71360036EF47 /* NSLayoutConstraint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extension.swift"; sourceTree = "<group>"; };
+		4B14652B296A72B60036EF47 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		4B146533296A81850036EF47 /* CoffeeShopsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopsDataManager.swift; sourceTree = "<group>"; };
+		4B146535296A8B820036EF47 /* CoffeeShopsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopsViewModel.swift; sourceTree = "<group>"; };
+		4B14653C296B5AE80036EF47 /* BusinessListCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		4B14653E296B5B5F0036EF47 /* SecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryTitleLabel.swift; sourceTree = "<group>"; };
+		4B146540296B5B960036EF47 /* BusinessInfoCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoCVCell.swift; sourceTree = "<group>"; };
+		4B146542296B5BDE0036EF47 /* BusinessAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessAvatarImageView.swift; sourceTree = "<group>"; };
+		4B146544296B5F840036EF47 /* ImageLoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadManager.swift; sourceTree = "<group>"; };
+		4B146546296B84F40036EF47 /* CoffeeShopsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopsDataSource.swift; sourceTree = "<group>"; };
+		4B146548296BA2700036EF47 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4B5DB565298C820D00104E9A /* UsesAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesAutoLayout.swift; sourceTree = "<group>"; };
+		4B6BA6B829A31D9A001B116E /* Configuration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.xcconfig; sourceTree = "<group>"; };
+		4B6BA6BB29A31EB7001B116E /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B1464E5296778960036EF47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B1464DF296778960036EF47 = {
+			isa = PBXGroup;
+			children = (
+				4B146548296BA2700036EF47 /* README.md */,
+				4B6BA6B829A31D9A001B116E /* Configuration.xcconfig */,
+				4B6BA6BB29A31EB7001B116E /* AppEnvironment.swift */,
+				4B1464EA296778960036EF47 /* CoffeeShops */,
+				4B1464E9296778960036EF47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B1464E9296778960036EF47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B1464E8296778960036EF47 /* CoffeeShops.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B1464EA296778960036EF47 /* CoffeeShops */ = {
+			isa = PBXGroup;
+			children = (
+				4B14650729677C5B0036EF47 /* API's */,
+				4B14651D296A6F520036EF47 /* Custom Views */,
+				4B14650A296A26720036EF47 /* Data Managers */,
+				4B146528296A71840036EF47 /* Extensions */,
+				4B146510296A2D190036EF47 /* Models */,
+				4B5DB567298C821100104E9A /* Property Wrappers */,
+				4B1464FF29677B1E0036EF47 /* Supporting Files */,
+				4B14650D296A27AB0036EF47 /* Utils */,
+				4B14650229677BC60036EF47 /* View Controllers */,
+				4B146537296A8B870036EF47 /* View Models */,
+			);
+			path = CoffeeShops;
+			sourceTree = "<group>";
+		};
+		4B1464FF29677B1E0036EF47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B1464EB296778960036EF47 /* AppDelegate.swift */,
+				4B1464ED296778960036EF47 /* SceneDelegate.swift */,
+				4B1464F4296778970036EF47 /* Assets.xcassets */,
+				4B1464F6296778970036EF47 /* LaunchScreen.storyboard */,
+				4B1464F9296778970036EF47 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B14650229677BC60036EF47 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B14650029677BAE0036EF47 /* CoffeeShopsDirectoryVC.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4B14650729677C5B0036EF47 /* API's */ = {
+			isa = PBXGroup;
+			children = (
+				4B14650329677C1B0036EF47 /* API.swift */,
+				4B14650529677C490036EF47 /* CoffeeShopsAPI.swift */,
+			);
+			path = "API's";
+			sourceTree = "<group>";
+		};
+		4B14650A296A26720036EF47 /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4B146508296A26680036EF47 /* NetworkManager.swift */,
+				4B14652B296A72B60036EF47 /* ImageCacheManager.swift */,
+				4B146533296A81850036EF47 /* CoffeeShopsDataManager.swift */,
+				4B146544296B5F840036EF47 /* ImageLoadManager.swift */,
+			);
+			path = "Data Managers";
+			sourceTree = "<group>";
+		};
+		4B14650D296A27AB0036EF47 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4B14650B296A279D0036EF47 /* NetworkError.swift */,
+				4B146519296A6EA50036EF47 /* Loadable.swift */,
+				4B146520296A70B40036EF47 /* Assets.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4B146510296A2D190036EF47 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B146515296A68970036EF47 /* Business.swift */,
+				4B146517296A68E80036EF47 /* BusinessSearchResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4B14651D296A6F520036EF47 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B14651B296A6F360036EF47 /* EmptyStateView.swift */,
+				4B14651E296A6F840036EF47 /* TitleLabel.swift */,
+				4B14653C296B5AE80036EF47 /* BusinessListCollectionViewFlowLayout.swift */,
+				4B14653E296B5B5F0036EF47 /* SecondaryTitleLabel.swift */,
+				4B146540296B5B960036EF47 /* BusinessInfoCVCell.swift */,
+				4B146542296B5BDE0036EF47 /* BusinessAvatarImageView.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		4B146528296A71840036EF47 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4B146522296A711A0036EF47 /* UIView+Extension.swift */,
+				4B146524296A71360036EF47 /* NSLayoutConstraint+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4B146537296A8B870036EF47 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B146535296A8B820036EF47 /* CoffeeShopsViewModel.swift */,
+				4B146546296B84F40036EF47 /* CoffeeShopsDataSource.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		4B5DB567298C821100104E9A /* Property Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				4B5DB565298C820D00104E9A /* UsesAutoLayout.swift */,
+			);
+			path = "Property Wrappers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B1464E7296778960036EF47 /* CoffeeShops */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B1464FC296778970036EF47 /* Build configuration list for PBXNativeTarget "CoffeeShops" */;
+			buildPhases = (
+				4B1464E4296778960036EF47 /* Sources */,
+				4B1464E5296778960036EF47 /* Frameworks */,
+				4B1464E6296778960036EF47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoffeeShops;
+			productName = CoffeeShops;
+			productReference = 4B1464E8296778960036EF47 /* CoffeeShops.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B1464E0296778960036EF47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					4B1464E7296778960036EF47 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 4B1464E3296778960036EF47 /* Build configuration list for PBXProject "CoffeeShops" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B1464DF296778960036EF47;
+			productRefGroup = 4B1464E9296778960036EF47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B1464E7296778960036EF47 /* CoffeeShops */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B1464E6296778960036EF47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B146549296BA2700036EF47 /* README.md in Resources */,
+				4B1464F8296778970036EF47 /* LaunchScreen.storyboard in Resources */,
+				4B1464F5296778970036EF47 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B1464E4296778960036EF47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B146543296B5BDE0036EF47 /* BusinessAvatarImageView.swift in Sources */,
+				4B146541296B5B960036EF47 /* BusinessInfoCVCell.swift in Sources */,
+				4B14653F296B5B5F0036EF47 /* SecondaryTitleLabel.swift in Sources */,
+				4B146509296A26680036EF47 /* NetworkManager.swift in Sources */,
+				4B146516296A68970036EF47 /* Business.swift in Sources */,
+				4B14652C296A72B60036EF47 /* ImageCacheManager.swift in Sources */,
+				4B5DB566298C820D00104E9A /* UsesAutoLayout.swift in Sources */,
+				4B14653D296B5AE80036EF47 /* BusinessListCollectionViewFlowLayout.swift in Sources */,
+				4B146545296B5F840036EF47 /* ImageLoadManager.swift in Sources */,
+				4B14650C296A279D0036EF47 /* NetworkError.swift in Sources */,
+				4B146518296A68E80036EF47 /* BusinessSearchResponse.swift in Sources */,
+				4B14650629677C490036EF47 /* CoffeeShopsAPI.swift in Sources */,
+				4B146534296A81850036EF47 /* CoffeeShopsDataManager.swift in Sources */,
+				4B1464EC296778960036EF47 /* AppDelegate.swift in Sources */,
+				4B146525296A71360036EF47 /* NSLayoutConstraint+Extension.swift in Sources */,
+				4B14650129677BAE0036EF47 /* CoffeeShopsDirectoryVC.swift in Sources */,
+				4B14650429677C1B0036EF47 /* API.swift in Sources */,
+				4B6BA6BC29A31EB7001B116E /* AppEnvironment.swift in Sources */,
+				4B146523296A711A0036EF47 /* UIView+Extension.swift in Sources */,
+				4B146521296A70B40036EF47 /* Assets.swift in Sources */,
+				4B1464EE296778960036EF47 /* SceneDelegate.swift in Sources */,
+				4B146536296A8B820036EF47 /* CoffeeShopsViewModel.swift in Sources */,
+				4B14651F296A6F840036EF47 /* TitleLabel.swift in Sources */,
+				4B14651A296A6EA50036EF47 /* Loadable.swift in Sources */,
+				4B146547296B84F40036EF47 /* CoffeeShopsDataSource.swift in Sources */,
+				4B14651C296A6F360036EF47 /* EmptyStateView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4B1464F6296778970036EF47 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B1464F7296778970036EF47 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B1464FA296778970036EF47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B6BA6B829A31D9A001B116E /* Configuration.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4B1464FB296778970036EF47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B6BA6B829A31D9A001B116E /* Configuration.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B1464FD296778970036EF47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72U296NY4T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CoffeeShops/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = CoffeeShops;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-expression-type-checking=100 -Xfrontend -warn-long-function-bodies=100\n";
+				PRODUCT_BUNDLE_IDENTIFIER = co.gopal.dev.CoffeeShops;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B1464FE296778970036EF47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72U296NY4T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CoffeeShops/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = CoffeeShops;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.gopal.dev.CoffeeShops;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B1464E3296778960036EF47 /* Build configuration list for PBXProject "CoffeeShops" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B1464FA296778970036EF47 /* Debug */,
+				4B1464FB296778970036EF47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B1464FC296778970036EF47 /* Build configuration list for PBXNativeTarget "CoffeeShops" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B1464FD296778970036EF47 /* Debug */,
+				4B1464FE296778970036EF47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B1464E0296778960036EF47 /* Project object */;
+}

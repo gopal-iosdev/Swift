@@ -1,0 +1,11 @@
+//
+//  Configuration.xcconfig
+//  CoffeeShops
+//
+//  Created by Gopal Gurram on 2/19/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_KEY = Xnirxp56v7LO1qAhdWMQ4os-AfvbyRGgQkwB1ACtbhOugMJGnPZTedRcFJOPCL4VrTpG4XJwg77LKmPzCZGH0V-Lt8sXvCdwEXq5ALiCFrYjJ_WSLAccmEbsruu5Y3Yx
