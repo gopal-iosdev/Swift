@@ -69,6 +69,7 @@
 		4B5DB565298C820D00104E9A /* UsesAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesAutoLayout.swift; sourceTree = "<group>"; };
 		4B6BA6B829A31D9A001B116E /* Configuration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.xcconfig; sourceTree = "<group>"; };
 		4B6BA6BB29A31EB7001B116E /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		4B6BA6BD29A32403001B116E /* CoffeeShops.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoffeeShops.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 		4B1464EA296778960036EF47 /* CoffeeShops */ = {
 			isa = PBXGroup;
 			children = (
+				4B6BA6BD29A32403001B116E /* CoffeeShops.entitlements */,
 				4B14650729677C5B0036EF47 /* API's */,
 				4B14651D296A6F520036EF47 /* Custom Views */,
 				4B14650A296A26720036EF47 /* Data Managers */,
@@ -449,9 +451,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoffeeShops/CoffeeShops.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 72U296NY4T;
+				DEVELOPMENT_TEAM = UEQ95NQCUE;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CoffeeShops/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CoffeeShops;
@@ -480,9 +483,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoffeeShops/CoffeeShops.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 72U296NY4T;
+				DEVELOPMENT_TEAM = UEQ95NQCUE;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CoffeeShops/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CoffeeShops;
