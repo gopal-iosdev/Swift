@@ -38,31 +38,44 @@ private enum ScaleFactor {
 }
 
 final class PhotoDetailViewController: UIViewController {
-  @IBOutlet weak var photoImageView: UIImageView!
-
-  var image: UIImage?
-
-  // MARK: - Lifecycle
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    assert(image != nil, "Image not set; required to use view controller")
-    guard let image = image else {
-      return
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    var image: UIImage?
+    
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        assert(image != nil, "Image not set; required to use view controller")
+        guard let image = image else {
+            return
+        }
+        photoImageView.image = image
+        
+        // Resize if necessary to ensure it's not pixelated
+        if image.size.height <= photoImageView.bounds.size.height &&
+            image.size.width <= photoImageView.bounds.size.width {
+            photoImageView.contentMode = .center
+        }
+        
+        fadeInImage()
     }
-    photoImageView.image = image
+    
+    private func fadeInImage() {
+        // 1
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+          guard let overlayImage = self?.image?.faceOverlayImageFrom() else {
+            return
+          }
 
-    // Resize if necessary to ensure it's not pixelated
-    if image.size.height <= photoImageView.bounds.size.height &&
-      image.size.width <= photoImageView.bounds.size.width {
-      photoImageView.contentMode = .center
-    }
+          // 2
+          DispatchQueue.main.async { [weak self] in
+            // 3
+            self?.fadeInNewImage(overlayImage)
+          }
+        }
 
-    guard let overlayImage = image.faceOverlayImageFrom() else {
-      return
     }
-    fadeInNewImage(overlayImage)
-  }
 }
 
 // MARK: - Private Methods

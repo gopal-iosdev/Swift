@@ -49,44 +49,67 @@ typealias PhotoProcessingProgressClosure = (_ completionPercentage: CGFloat) -> 
 typealias BatchPhotoDownloadingCompletionClosure = (_ error: NSError?) -> Void
 
 final class PhotoManager {
-  private init() {}
-  static let shared = PhotoManager()
-
-  private var unsafePhotos: [Photo] = []
-
-  var photos: [Photo] {
-    return unsafePhotos
-  }
-
-  func addPhoto(_ photo: Photo) {
-    unsafePhotos.append(photo)
-    DispatchQueue.main.async { [weak self] in
-      self?.postContentAddedNotification()
-    }
-  }
-
-  func downloadPhotos(withCompletion completion: BatchPhotoDownloadingCompletionClosure?) {
-    var storedError: NSError?
-    for address in [
-      PhotoURLString.overlyAttachedGirlfriend,
-      PhotoURLString.successKid,
-      PhotoURLString.lotsOfFaces
-    ] {
-      guard let url = URL(string: address) else {
-        return
-      }
-      let photo = DownloadPhoto(url: url) { _, error in
-        if let error = error {
-          storedError = error
+    private init() {}
+    static let shared = PhotoManager()
+    
+    private let concurrentPhotoQueue =
+    DispatchQueue(
+        label: "com.raywenderlich.GooglyPuff.photoQueue",
+        attributes: .concurrent)
+    
+    
+    private var unsafePhotos: [Photo] = []
+    
+    var photos: [Photo] {
+        var photosCopy: [Photo] = []
+        
+        concurrentPhotoQueue.sync {
+            photosCopy = unsafePhotos
         }
-      }
-      PhotoManager.shared.addPhoto(photo)
+        
+        return photosCopy
+    }
+    
+    func addPhoto(_ photo: Photo) {
+        // 1
+        concurrentPhotoQueue.async(flags: .barrier) { [weak self] in
+            guard let self = self else {
+                return
+            }
+            
+            // 2
+            self.unsafePhotos.append(photo)
+            
+            // 3
+            DispatchQueue.main.async { [weak self] in
+                self?.postContentAddedNotification()
+            }
+        }
     }
 
-    completion?(storedError)
-  }
-
-  private func postContentAddedNotification() {
-    NotificationCenter.default.post(name: PhotoManagerNotification.contentAdded, object: nil)
-  }
+    
+    func downloadPhotos(withCompletion completion: BatchPhotoDownloadingCompletionClosure?) {
+        var storedError: NSError?
+        for address in [
+            PhotoURLString.overlyAttachedGirlfriend,
+            PhotoURLString.successKid,
+            PhotoURLString.lotsOfFaces
+        ] {
+            guard let url = URL(string: address) else {
+                return
+            }
+            let photo = DownloadPhoto(url: url) { _, error in
+                if let error = error {
+                    storedError = error
+                }
+            }
+            PhotoManager.shared.addPhoto(photo)
+        }
+        
+        completion?(storedError)
+    }
+    
+    private func postContentAddedNotification() {
+        NotificationCenter.default.post(name: PhotoManagerNotification.contentAdded, object: nil)
+    }
 }
